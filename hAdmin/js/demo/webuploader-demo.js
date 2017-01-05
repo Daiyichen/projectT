@@ -82,7 +82,7 @@ jQuery(function() {
 
         chunked: true,
         // server: 'http://webuploader.duapp.com/server/fileupload.php',
-        server: 'http://2betop.net/fileupload.php',
+        server: 'http://www.bingchen.site/server/fileupload.php',
         fileNumLimit: 300,
         fileSizeLimit: 5 * 1024 * 1024,    // 200 M
         fileSingleSizeLimit: 1 * 1024 * 1024    // 50 M
@@ -353,6 +353,7 @@ jQuery(function() {
         updateStatus();
     }
 
+    // 文件上传过程中创建进度条实时显示。
     uploader.onUploadProgress = function( file, percentage ) {
         var $li = $('#'+file.id),
             $percent = $li.find('.progress span');
@@ -362,6 +363,7 @@ jQuery(function() {
         updateTotalProgress();
     };
 
+    // 当有文件添加进来的时候
     uploader.onFileQueued = function( file ) {
         fileCount++;
         fileSize += file.size;
