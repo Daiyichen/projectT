@@ -2,13 +2,62 @@ html{height: 100%;}
 body.login {
     background: #18c8f6;
     height: auto;
-    background:url("../img/login-background.jpg") no-repeat center fixed;
+    background:url("../img/login.jpg") no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: rgba(255,255,255,.95);
 }
+
+.login-pannel{
+	width: 460px;
+	background: #fff;
+	height: 100%;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right: 0;
+	color: #76838f;
+}
+.login-box{
+	height: 100%;
+	padding: 0 50px 130px 50px;
+}
+
+.login-box:before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+}
+
+.vertical-align-middle{
+	display: inline-block;
+	vertical-align:middle ;
+}
+
+.login-box .row{width: 100%;}
+.login-box .title{
+	font-size: 30px;
+    text-align: center;
+    margin-bottom: 100px
+}
+.login-box .form-control{ 
+	 display: block;
+     margin-top: 20px;
+     height: 40px;
+ }
+.login-box .uname {
+    background: #fff url(../img/user.png) no-repeat 95% center;color:#333;
+}
+
+.login-box .pword {
+    background: #fff url(../img/locked.png) no-repeat 95% center;color:#333;
+}
+
+.login-box .btn{padding: 8px 0;font-size: 16px;}
+
 
 .signinpanel {
     width: 320px;
@@ -57,7 +106,21 @@ body.login {
     padding: 30px;
 }
 
-.signup-footer{border-top: solid 1px rgba(255,255,255,.3);margin:20px 0;padding-top: 15px;}
+.login-footer{
+	border-top: solid 1px rgba(255,255,255,.3);
+	position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.captcha{
+	cursor: pointer;
+	padding: 0;
+    border: 0;
+    padding-top: 20px;
+    height: 40px;
+}
 
 @media screen and (max-width: 768px) {
     .signinpanel,
