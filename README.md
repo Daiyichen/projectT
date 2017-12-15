@@ -7,7 +7,6 @@ hAdmin是一个免费的后台管理模版,该模版基于bootstrap与jQuery制�
 website
 website里为本人写的前端网页
 
-<<<<<<< 919c55b704d00d5f96502c41ce32d14905f6d400
 ![image](https://github.com/Daiyichen/hAdmin/raw/master/hAdmin/img/1.png)
 
 
@@ -16,4 +15,4 @@ website里为本人写的前端网页
 [演示地址](http://www.bingchen.site/hAdmin/#) 
 =======
 #daiyichen.github.io
->>>>>>> add bdtgymf website
+
