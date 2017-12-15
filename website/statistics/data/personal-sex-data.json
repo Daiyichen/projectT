@@ -1,0 +1,20 @@
+﻿{
+  "status": "success",
+  "title":"",
+  "data":[
+    {
+      "typeName":"曝光",
+      "typeValue":{
+        "man":"0.45",
+        "woman":"0.55"
+      }
+    },
+    {
+      "typeName":"点击",
+      "typeValue":
+        {"man":"0.80",
+        "woman":"0.20"
+        }
+    }
+  ]
+}

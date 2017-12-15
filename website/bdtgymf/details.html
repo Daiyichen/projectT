@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta id="viewport" name="viewport" content="width=1200" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+		<link rel="stylesheet" type="text/css" href="css/proup.css" />
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>楼盘详情</title>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<script type="text/javascript">
+				$("header").load("header.html",function(){
+					$(".nav-box li").eq(1).addClass("active").siblings().removeClass("active");
+				});
+			</script>
+		</header>
+		<!--头部-->
+		<div class="main-wrapper">
+			<div class="left-box">
+				<div class="detail-box">
+					<h1 class="title1">基本信息</h1>
+					<ul>
+						<li><label>销售价格：</label>均价7688元/平</li>
+						<li><label>装修状况：</label>毛坯</li>
+						<li><label>物业类别：</label>住宅</li>
+						<li><label>产权年限：</label>住宅 70年</li>
+						<li><label>建筑类别：</label>高层，小高层，多层</li>
+						<li><label>开发商：</label>沈阳凯盈汇源房地产开发有限公司</li>
+						<li><label>楼盘地址：</label>[沈河区-沈河区]东陵路3号-1</li>
+						<li><label>环线位置：</label>一环至二环</li>
+					</ul>
+				</div>
+				<div class="detail-box">
+					<h1 class="title1">销售信息</h1>
+					<ul>
+						<li><label>销售状态：</label>在售</li>
+						<li><label>售楼地址：</label>大东区和睦北一路37号黎明文化宫</li>
+						<li><label>开盘时间：</label>2016年05月28日</li>
+						<li><label>在售户型：</label>二居(1)</li>
+						<li><label>交房时间：</label>2017年12月31日</li>
+						<li><label>预售许可证：</label>沈房预售第15146号</li>
+						<li><label>售楼电话：</label>400-810-1858 转 11196</li>
+					</ul>
+				</div>
+				<div class="detail-box">
+					<h1 class="title1">小区规划</h1>
+					<ul>
+						<li><label>容积率：</label>2.4%</li>
+						<li><label>总数：</label>13000栋</li>
+						<li><label>绿化率：</label>40%</li>
+						<li><label>物业公司：</label>沈阳道恩物业管理有限公司</li>
+						<li><label>停车位：</label>地下停车位</li>
+						<li><label>物业费：</label>2.80元/平米</li>
+						<li><label>楼栋总数：</label>54栋栋户</li>
+					</ul>
+					<div class="detail-des">
+						本小区地处沈河区东陵路3号，项目位于一环以东，二环以内，老大东与新沈河的交界处，新沈河的核心地带。毗邻地铁一号线黎明广场站，项目附近多条公交线，出行十分方便。本小区地处沈河区东陵路3号，项目位于一环以东，二环以内，老大东与新沈河的交界处，新沈河的核心地带。
+					</div>
+				</div>
+				<div class="detail-box">
+					<h1 class="title1">周边配套</h1>
+					<div class="detail-des">
+						<label>交通：</label>107路，169路，230路，274路新东安居小区站，112路。133路，168路，218路，384路，385路，386路良城美景站
+					</div>
+					<div class="detail-des">
+						<label>商场：</label>东北育才幼儿园；白塔小学、浑南三小；白塔中学、东北育才初高中、中五十一中；东北大学、鲁美、音乐学院
+					</div>
+					<div class="detail-des">
+						<label>生活：</label>休闲公园，包括成人活动区和儿童活动区，业主会所内设施齐全，供业主健身休闲
+					</div>
+				</div>
+			</div>
+			<div class="right-box">
+				<div class="notice-box">
+					<div class="tel-box">024-31282625</div>
+					<form name="submitForm">
+					<div class="input-box0">
+						<input type="text" name="tel" id="tel" placeholder="请输入手机号" /><span>免费通话</span>
+					</div>
+					<div id="error1"></div>
+					</form>
+					<div class="info-box">为您加密手机号，私密链接售楼处</div>
+				</div>
+				<!--订阅信息-->
+        			<div class="advisor-label subscribe-box">
+			            <ul class="sub-list clearfix">
+			              <li class="sub-item">
+			              	<input type="checkbox" value="bj" name="bj" id="select1">
+			                <label for="select1">变价通知</label>
+			               </li>
+			              <li class="sub-item">
+			                <input type="checkbox" value="yh" name="yh" id="select2">
+			                <label for="select2">优惠通知</label>
+			              </li>
+			              <li class="sub-item">
+			              	 <input type="checkbox" value="kp" name="kp" id="select3">
+			                 <label for="select3">开盘通知</label>
+			              </li>
+			              <li class="sub-item">
+			                <input type="checkbox" value="dt" name="dt" id="select4">
+			                <label for="select4">最新动态</label>
+			               </li>
+			              <li class="sub-item">
+			                <input type="checkbox" value="kf" name="kf" id="select5">
+			                <label for="select5">看房团通知</label>
+			                </li>
+			            </ul>
+			            <a href="javascript:" class="btn-main btn-subscribe">立即订阅</a>
+					</div>
+			</div>
+		</div>
+		<footer>
+			<script type="text/javascript">
+				$(function(){
+					$("footer").load("footer.html");
+				});
+			</script>
+		</footer>
+		<!--layer photo-->
+		<script type="text/javascript">
+    		var build_res={"id":"427575","name":"\u91d1\u5730\u540d\u8457","addr":"[\u7687\u59d1\u533a-\u7687\u59d1\u533a]\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","price_num":"\u5747\u4ef78000\u5143\/\u5e73","decoration":"","things":"\u4f4f\u5b85","goods":"50","build":"\u9ad8\u5c42","developer_name":"\u6c88\u9633\u9f0e\u4e1a\u623f\u5730\u4ea7\u5f00\u53d1\u6709\u9650\u516c\u53f8","line":"\u4e8c\u73af","sell_state":"\u5f85\u552e","sell_address":"\u7687\u59d1\u533a\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","sta_time":"2017\u5e7411\u670828\u65e5","end_time":"2018\u5e7401\u670817\u65e5","licence_content":"","sell_tel":"024-31282625","build_nums":"","greening_rate":"","volume_ratio":"","property_name":"\u5c1a\u672a\u516c\u5f00","car_position":"","property_price":"0.00","many":"300","area_msg":"","traffic":"","market":"","life":""};
+		</script>
+		<script src="js/util/layerphoto/layer.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/bdetail.js"></script>
+	</body>
+</html>

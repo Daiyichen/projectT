@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta id="viewport" name="viewport" content="width=1200" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<title>楼盘图集</title>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header>
+			<script type="text/javascript">
+				$("header").load("header.html", function() {
+					$(".nav-box li").eq(4).addClass("active").siblings().removeClass("active");
+
+				});
+			</script>
+		</header>
+		<!--头部-->
+
+		<div class="container">
+			<!--楼盘信息-->
+			<div class="content-wrapper">
+				<!--图集-->
+				<div class="content-item thumblist-wrapper" id="thubmlist_wrapper">
+					<script id="layer-teplate-photo" type="text/html">
+						{{if total != 0}}
+						<h2 class="title">图集({{total}})</h2>
+						<ul class="thumb-list clearfix" id="layer-photos-demo">							
+						    {{each photos as value}}					     
+						        {{if value.data && value.data[0]}}
+							        <li class="thumb-item">
+										<img src="{{value.data[0].src}}" data-pid="{{value.type}}" alt="{{value.data[0].alt}}">
+										<p class="mark-txt">{{value.title}}</p>
+									</li>
+								{{/if}}
+						    {{/each}}
+						    
+						</ul>
+						{{/if}}
+					</script>
+				<!--	<h2 class="title">图集(12)</h2>
+					<ul class="thumb-list clearfix" id="layer-photos-demo">
+						<li class="thumb-item">
+							<img src="img/tj1.jpg" data-pid="1" alt="效果图">
+							<p class="mark-txt">效果图</p>
+						</li>
+
+						<li class="thumb-item">
+							<img src="img/tj2.jpg" data-pid="2" alt="交通图">
+							<p class="mark-txt">交通图</p>
+						</li>
+						<li class="thumb-item">
+							<img src="img/tj3.jpg" data-pid="3" alt="样板图">
+							<p class="mark-txt">样板图</p>
+						</li>
+						<li class="thumb-item">
+							<img src="img/tj4.jpg" data-pid="4" alt="局部图">
+							<p class="mark-txt">局部图</p>
+						</li>
+						<li class="thumb-item">
+							<img src="img/tj5.jpg" data-pid="5" alt="远眺图">
+							<p class="mark-txt">远眺图</p>
+						</li>
+						<li class="thumb-item">
+							<img src="img/tj6.jpg" data-pid="6" alt="鸟瞰图">
+							<p class="mark-txt">鸟瞰图</p>
+						</li>
+					</ul>-->
+				</div>
+				<!--图集-->
+
+			</div>
+		</div>
+
+		<!--弹出相册的右侧信息-->
+		<div id="layer-photo-right">
+			<script type="text/javascript">
+				$("#layer-photo-right").load("photolayer.html", function() {});
+			</script>
+		</div>
+
+		<!--弹出相册的右侧信息-->
+		<footer>
+			<script type="text/javascript">
+				$("footer").load("footer.html", function() {});
+			</script>
+		</footer>
+
+		<!--layer photo-->
+		<script src="js/util/layerphoto/layer.js"></script>
+		  <script src="js/lib/template.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+    var albums={"total":5,"photos":[{"type":1,"title":"\u6548\u679c\u56fe","id":0,"start":0,"data":[{"alt":"","pid":"2220","src":"https:\/\/pic2.ajkimg.com\/m\/964d44ec7331c40a438cd470dab224d4\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/964d44ec7331c40a438cd470dab224d4\/275x206n.jpg"},{"alt":"","pid":"2223","src":"https:\/\/pic2.ajkimg.com\/m\/f6e0dcf95280049d96cb7d905513b35d\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/f6e0dcf95280049d96cb7d905513b35d\/275x206n.jpg"},{"alt":"","pid":"2227","src":"https:\/\/pic2.ajkimg.com\/m\/96bd257e9827fb2bc17727beced73af7\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/96bd257e9827fb2bc17727beced73af7\/275x206n.jpg"},{"alt":"","pid":"2231","src":"https:\/\/pic2.ajkimg.com\/m\/9c95ac6d7a287df52dae33e3409f1987\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/9c95ac6d7a287df52dae33e3409f1987\/275x206n.jpg"}]},{"type":2,"title":"\u89c4\u5212\u56fe","id":0,"start":0,"data":[]},{"type":3,"title":"\u5b9e\u666f\u56fe","id":0,"start":0,"data":[]},{"type":4,"title":"\u4ea4\u901a\u56fe","id":0,"start":0,"data":[{"alt":"","pid":"2236","src":"https:\/\/pic2.ajkimg.com\/m\/1a0e386b18e4c156d5a9f41bfb299ff7\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/1a0e386b18e4c156d5a9f41bfb299ff7\/275x206n.jpg"}]},{"type":5,"title":"\u6837\u677f\u95f4","id":0,"start":0,"data":[]},{"type":6,"title":"\u914d\u5957\u56fe","id":0,"start":0,"data":[]}]};
+    var build_res={"id":"427575","0":"427575","name":"\u91d1\u5730\u540d\u8457","1":"\u91d1\u5730\u540d\u8457","add_time":"1511280000","2":"1511280000","update_time":"1513304418","3":"1513304418","indexaction_id":"56","4":"56","secondaction_id":"251","5":"251","addr":"\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","6":"\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","line":"\u4e8c\u73af","7":"\u4e8c\u73af","goods":"50","8":"50","build":"\u9ad8\u5c42","9":"\u9ad8\u5c42","things":"\u4f4f\u5b85","10":"\u4f4f\u5b85","decoration":"","11":"","many":"300","12":"300","b_area":"","13":"","area":"","14":"","content":null,"15":null,"judgement":"1","16":"1","publish":"1","17":"1","city_id":"1","18":"1","user_id":"2","19":"2","isvalue":"1","20":"1","area_msg":"","21":"","property_name":"\u5c1a\u672a\u516c\u5f00","22":"\u5c1a\u672a\u516c\u5f00","property_price":"0.00","23":"0.00","greening_rate":"","24":"","volume_ratio":"","25":"","car_position_num":"","26":"","car_position_ratio":"0.7\uff1a1","27":"0.7\uff1a1","car_position_price":"","28":"","longitude":"123.456762","29":"123.456762","latitude":"41.841738","30":"41.841738","location_img":"\/images\/buildingExtendImage\/20161012cl78wqa45t.jpg","31":"\/images\/buildingExtendImage\/20161012cl78wqa45t.jpg","sta_time":"1511798400","32":"1511798400","end_time":"1516118400","33":"1516118400","sell_state":"\u5f85\u552e","34":"\u5f85\u552e","sell_tel":"024-31282625","35":"024-31282625","sell_tel_s":"","36":"","sell_address":"\u7687\u59d1\u533a\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","37":"\u7687\u59d1\u533a\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","developer_name":"\u6c88\u9633\u9f0e\u4e1a\u623f\u5730\u4ea7\u5f00\u53d1\u6709\u9650\u516c\u53f8","38":"\u6c88\u9633\u9f0e\u4e1a\u623f\u5730\u4ea7\u5f00\u53d1\u6709\u9650\u516c\u53f8","licence_content":"","39":"","be_listed":"0","40":"0","five_card":"0","41":"0","pay_type":"","42":"","price_num":"8000","43":"8000","price_diff":"1000","44":"1000","youhui":"\u53cc\u5341\u4e8c\u62538\u6298","45":"\u53cc\u5341\u4e8c\u62538\u6298","yh_title":"\u4ef7\u683c\u4f18\u60e0","46":"\u4ef7\u683c\u4f18\u60e0","yh_content":"\u53cc\u5341\u4e8c\u671f\u95f4\uff0c\u653e\u6b3e\u62538\u6298\uff0c\u5fc3\u52a8\u4e0d\u5982\u884c\u52a8\uff0c\u6d3b\u52a8\u4ec5\u6301\u7eed\u4e00\u5468\uff01  \u7f51\u4e0a\u62a5\u540d\u4e86\u89e3\u697c\u76d8\u6700\u65b0\u8be6\u60c5\uff01","47":"\u53cc\u5341\u4e8c\u671f\u95f4\uff0c\u653e\u6b3e\u62538\u6298\uff0c\u5fc3\u52a8\u4e0d\u5982\u884c\u52a8\uff0c\u6d3b\u52a8\u4ec5\u6301\u7eed\u4e00\u5468\uff01  \u7f51\u4e0a\u62a5\u540d\u4e86\u89e3\u697c\u76d8\u6700\u65b0\u8be6\u60c5\uff01","yh_time":"2017.11.14-2017.12.31","48":"2017.11.14-2017.12.31","sale_addr":"","49":"","car_position":"","50":"","build_nums":"","51":"","traffic":"","52":"","market":"","53":"","life":"","54":"","tags":"\u6539\u5584\u623f,\u7cbe\u88c5\u4fee,\u4f4e\u5bc6\u5ea6,\u516c\u56ed,\u5730\u6696","55":"\u6539\u5584\u623f,\u7cbe\u88c5\u4fee,\u4f4e\u5bc6\u5ea6,\u516c\u56ed,\u5730\u6696"};
+</script>
+		<script src="js/thumblist.js"></script>
+	</body>
+
+</html>

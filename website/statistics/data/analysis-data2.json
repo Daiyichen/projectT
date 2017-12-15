@@ -1,0 +1,14 @@
+﻿{
+  "status": "success",
+  "title":"平台曝光分布图",
+  "series":[
+    {
+      "name":"平台曝光分布图",
+      "data":[
+        {"value":"35", "name":"智慧推"},
+        {"value":"310", "name":"艾推不推"},
+        {"value":"134", "name":"广点通"}
+    ]
+    }
+  ]
+}

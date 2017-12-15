@@ -1,0 +1,14 @@
+﻿{
+  "status": "success",
+  "title":"点击",
+  "series":[
+    {
+      "name":"点击",
+      "data":[
+        {"value":"35", "name":"10-20岁"},
+        {"value":"310", "name":"20-30岁"},
+        {"value":"234", "name":"30-40岁"}
+    ]
+    }
+  ]
+}

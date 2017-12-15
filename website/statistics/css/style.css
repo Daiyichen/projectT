@@ -1,0 +1,634 @@
+body{
+    background-color: #242534;
+    font-family:"微软雅黑";
+    font-size:16px;
+   -webkit-background-size: 100%;
+    background-size: 100%;
+    -webkit-user-select: none;  /* Chrome all / Safari all /opera15+*/
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+.blue{
+    color:#02e8f6;
+}
+
+/*top部分*/
+.top{
+    position: relative;
+    height: 60px;
+    top: 15px;
+    color:#66666e;
+}
+.logo{
+    width:65px;
+    height: 65px;
+}
+.logo a{
+    display: block;
+}
+.logo img{
+    width: 100%;
+}
+.mail{
+    margin-left: 33px;
+    background-color: #3a3b49;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.center{
+    position: absolute;
+    width: 150px;
+    left: 50%;
+    margin-left: -75px;
+}
+.center span{
+    margin-right: 25px;
+    height: 65px;
+    line-height: 65px;
+}
+/*.center span:first-child{
+    margin-left: 25px;
+}*/
+.current{
+    color:#fff;
+}
+
+.user{
+  margin-right: 3%;
+  background-color: #3a3b49;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+
+}
+/*header部分*/
+.header{
+    width: 35%;
+    margin: 0 auto;
+    text-align: center;
+    color:#fff;
+}
+
+.header .day{
+    color:#03deec;
+    font-size: 46px;
+}
+.header .date{
+    font-size: 13px;
+    font-weight: 100;
+}
+.welcome{
+    font-weight: 100;
+}
+.header-bottom{
+    width: 50px;
+    border-bottom: 1px solid #66666e;
+    margin: 20px auto 0;
+}
+/*主页数据部分*/
+.content-box{
+    width: 100%;
+    height: 350px;
+}
+
+.main-box{
+    width: 100%;
+    height: 100%;
+
+}
+
+.seemore-box{
+    text-align: center;
+    line-height: 50px;
+}
+/*下三角*/
+.seemore{
+    content: " ";
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #4f5971;
+    font-size: 0px;
+    position: relative;
+    left: 20px;
+}
+
+.seedetail a{
+    position: relative;
+    display: inline-block;
+    color: #cfcfd1;
+    font-size: 12px;
+    top: -22px;
+    right: 35px
+}
+
+.seedetail a:after{
+    content: " ";
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+    font-size: 0px;
+    position: relative;
+    left:5px;
+    top:-5px;
+}
+/*下半部分*/
+#footer{
+    display: none; /*第一页隐藏*/
+}
+.footer{
+    width: 100%;
+    bottom:15px;
+}
+
+.bottom-box{
+    position: relative;
+    width: 94%;
+    height: 200px;
+    margin: 15px auto;
+    background-color: #2f3045;
+    color: #cfcfd1;
+    border-radius: 10px;
+}
+
+.bottom-box li{
+    float: left;
+    width: 33%;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 15px;
+}
+#type_number li:last-child{
+    margin-top: 9px;
+}
+.item p{
+    font-size: 24px;
+}
+.hasSee{
+    color:#05deec;
+}
+.hasClick{
+    color:#ffdd56;
+}
+.hasTel{
+    color:#57ffb6;
+}
+.seeImage{
+    text-align: center;
+    margin-top: 40px;
+}
+
+/*查看用户画像*/
+.seeImage a{
+    color:#fff;
+}
+
+/*右三角*/
+.seeImage a:after{
+    content: " ";
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+    font-size: 0px;
+    position: relative;
+    left:5px;
+    top:-5px;
+}
+/*详情页*/
+.top-select-box{
+    width: 33%;
+    margin-left: 10px;
+}
+.detail-select{
+    padding:0 5px;
+    width: 90%;
+}
+
+.ecpc-box{
+    text-align: center;
+}
+.ecpc-box span{
+    display: inline-block;
+}
+
+.ecpc-box .ecpc{
+    margin-right: 40px;
+}
+
+.h-300{
+    height: 300px;
+}
+.h-250{
+    height: 250px;
+}
+.h-150{
+    height: 150px;
+}
+.h-50{
+    height: 50px;
+}
+
+.plat{
+    line-height: 50px;
+    padding-left: 30px;
+}
+
+.plat a{
+    display: block;
+    color:#fff;
+}
+
+/*右三角*/
+.plat a:after{
+    content: " ";
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+    font-size: 0px;
+    position: relative;
+    left: 70%;
+    top: -5px;
+}
+/*用户画像*/
+.user-sex-box{
+    margin-top: 12px;
+}
+.item-title{
+    color:#03dceb;
+    background: url("../images/dot.png") no-repeat;
+    padding-left: 35px;
+    height: 27px;
+    line-height: 27px;
+    margin-left: 15px;
+}
+.platform-select{
+    margin: 5px 15px;
+    width: 150px;
+}
+.user-sex-title{
+    line-height: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.inner-type{
+    width: 100%;
+    height: 100%;
+}
+
+.inner-type .man, .inner-type .woman{
+    height: 50%;
+    padding:7px 0 0;
+}
+.img-box{
+    position: relative;
+}
+.img-box-layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #2f3045;
+    opacity: 0;
+}
+
+.man img, .woman img{
+    width: 18px;
+    vertical-align: middle;
+}
+.inner-type .info{
+    line-height: 50px;
+    margin-right: 5px;
+}
+
+.man .info{
+    color:#00f0ff;
+    font-size: 12px;
+}
+.woman .info{
+    color:#ffdd56;
+    font-size: 12px;
+}
+/*平台分析*/
+.echart-box{
+    margin-top: 20px;
+}
+
+ select{
+    display: block;
+    border-radius: 20px;
+    height: 45px;
+    text-align: center;
+    background: #363745;
+    border: 0;
+    color: #c0c0c3;
+     /* Remove select styling */
+     appearance: none;
+     -webkit-appearance: none;
+     background: #363743 url("../images/arrow.png") no-repeat right;
+     padding: 0 5%;
+     background-position: 90%;
+}
+
+.platform-select:after {
+    content: " ";
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+    font-size: 0px;
+    position: relative;
+    left:5px;
+    top:-5px;
+}
+/*select::-ms-expand { display: none; }*/
+.time-select{
+    width: 95%;
+    margin: 0 auto;
+    text-indent: 40%;
+}
+
+.time-split-select{
+    width:150px;
+}
+
+/*消息中心*/
+.item-box{
+    width:94%;
+    margin: 15px auto 0;
+    background: #2f3045;
+    border-radius: 5px;
+    color:#fefefe;
+}
+.item-box .inner{
+    width:85%;
+    margin: 0 auto;
+}
+
+.item-box .inner .inner-top{
+    padding:12px 5px 4px;
+}
+
+.item-box .inner .inner-bottom{
+    padding: 6px 0 15px 5px;
+}
+
+.item-box .unread{
+    max-width: 6%;
+    margin-left: -35px;
+    line-height: 1.8rem;
+}
+
+.item-box .unread img{
+    max-width: 100%;
+}
+.item-box .userName{
+    color:#09d3e2;
+    line-height: 1.5rem;
+}
+.inner-bottom{
+    line-height: 1.8rem;
+    height: 60px;
+}
+
+/* 点击三角查看更多*/
+.caret{
+    text-align: center;
+    bottom: 15px;
+    position: relative;
+}
+.caret:after{
+    content: " ";
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    font-size: 0px;
+    position: relative;
+}
+
+.caretUp{
+    text-align: center;
+    bottom: 15px;
+    position: relative;
+}
+
+.caretUp:after{
+    content: " ";
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    font-size: 0px;
+    position: relative;
+}
+
+/*账户信息*/
+.tips{
+    color:#fff;
+    margin:5px;
+    margin-left: 15px;
+}
+.account-inner{
+    width: 70%;
+    margin: 0 auto;
+}
+.item-box .money-icon{
+    background: url("../images/money.png") no-repeat;
+    background-size: 25px;
+    background-position-y: 11px;
+    padding-left: 35px;
+    padding-top: 10px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: -30px;
+}
+.item-box  .telphone-icon{
+    background: url("../images/tel.png") no-repeat;
+    background-size: 25px;
+    background-position-y: 11px;
+    padding-left: 35px;
+    padding-top: 10px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: -30px;
+}
+.money-info{
+    color:#a3a3a9;
+}
+.money-info > div{
+    padding: 9px 0;
+}
+.money-info > div:last-child{
+    padding-bottom: 10px;
+}
+.account-detail{
+    position: relative;
+    text-align: center;
+    border-top: 1px solid #28283c;
+    padding: 15px 0;
+}
+
+.account-detail a{
+    position: relative;
+    display: block;
+    color: #fff;
+}
+
+.account-detail a:after {
+    content: " ";
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+    font-size: 0px;
+    position: relative;
+    left: 5px;
+    top: -5px;
+}
+
+/*消费明细*/
+.consumer_title{
+    margin-top: 10px;
+    background-size: 25px;
+    line-height: 25px;
+    color:#676a79;
+    font-size: 14px;
+}
+.consumer-table-box table{
+    width: 100%;
+}
+
+.consumer-table-box table th{
+    padding: 3px;
+    color:#676a79;
+    width: 20%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.consumer-table-box tr td{
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.consumer-table-box tfoot tr td{
+    border-top: 1px solid #28283c;
+}
+/*我的留电数量*/
+.totalNum{
+    margin-right: 20px;
+}
+.place{
+    color:#676a79;
+    font-size: 12px;
+}
+.consumer-table-box td img{
+    max-width: 35px;
+}
+.consumer-table-box td.tel{
+    width: 40%;
+}
+@media screen and (max-height: 640px){
+    .top{
+        height: 50px;
+    }
+    .h-150{
+        height: 130px;
+    }
+
+    .money-info > div{
+        padding: 8px 0;
+    }
+}
+
+@media screen and (max-height: 620px){
+    .money-info > div{
+        padding: 6px 0;
+    }
+}
+
+@media screen and (max-height: 580px){
+    .top{
+        top: 10px;
+        height: 50px;
+    }
+    .content-box{
+        height: 300px;
+    }
+
+    .h-150{
+        height: 120px;
+    }
+    /*账户中心*/
+    .account-wrapper{
+        font-size: 14px;
+    }
+    .money-info > div{
+        padding: 5px 0;
+    }
+         .account-detail{
+                padding:10px
+         }
+         /**/
+    .consumer-table-box table th, .consumer-table-box tr td{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 480px){
+    .logo{
+        width:40px;
+        height: 40px;
+    }
+    select{
+        height: 35px;
+    }
+
+    .center span {
+        height: 45px;
+        line-height: 45px;
+    }
+    .center span{
+        margin-right: 30px;
+    }
+    /*.center span:first-child{
+        margin-left: 35px;
+    }*/
+}
+
+@media screen and (max-width: 400px){
+    .man img, .woman img{
+        width: 15px;
+        vertical-align: middle;
+    }
+}
+@media screen and (max-width: 330px){
+    .logo{
+        width:35px;
+        height: 35px;
+    }
+    select{
+        height: 30px;
+    }
+    .center span {
+        height: 35px;
+        line-height: 35px;
+    }
+    .man img, .woman img{
+        width: 13px;
+        vertical-align: middle;
+    }
+}

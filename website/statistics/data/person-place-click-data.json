@@ -1,0 +1,14 @@
+﻿{
+  "status": "success",
+  "title":"点击",
+  "series":[
+    {
+      "name":"点击",
+      "data":[
+        {"value":"335", "name":"辽宁"},
+        {"value":"110", "name":"吉林"},
+        {"value":"34", "name":"黑龙江"}
+      ]
+    }
+  ]
+}

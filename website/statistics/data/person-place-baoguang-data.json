@@ -1,0 +1,14 @@
+﻿{
+  "status": "success",
+  "title":"曝光",
+  "series":[
+    {
+      "name":"曝光",
+      "data":[
+        {"value":"135", "name":"辽宁"},
+        {"value":"210", "name":"吉林"},
+        {"value":"134", "name":"黑龙江"}
+      ]
+    }
+  ]
+}

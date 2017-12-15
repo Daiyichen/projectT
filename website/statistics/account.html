@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>精智效果展示平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css?v=2016072501">
+</head>
+<body>
+<div class="top">
+    <div class="fl tips">万科, 欢迎回来</div>
+    <div class="user fr logo"><a id="logout"><img src="images/logout.png"></a></div>
+</div>
+<div class="header">
+    <div id="day" class="day">23</div>
+    <div class="welcome">您已投放天数</div>
+    <div class="header-bottom"></div>
+</div>
+<div class="account-wrapper">
+    <div class="item-box">
+        <div class="account-inner">
+            <div class="inner-top money-icon">
+                <span class="userName">资金信息</span>
+            </div>
+            <div class="money-info">
+                <div>账户余额：<span class="fr blue">￥20,000</span></div>
+                <div>今日支出：<span class="fr blue">￥2,000</span></div>
+                <div>昨日支出：<span class="fr blue">￥20,000</span></div>
+                <div>累计支出：<span class="fr blue">￥22,000</span></div>
+            </div>
+
+        </div>
+        <div class="account-detail"><a href="consumer_detial.html">查看消费明细</a></div>
+    </div>
+    <div class="item-box">
+    <div class="account-inner">
+        <div class="inner-top telphone-icon">
+            <span class="userName">留电信息</span>
+        </div>
+        <div class="money-info">
+            <div>累计留电：<span class="fr blue">2368</span></div>
+            <div>今日留电：<span class="fr blue">26</span></div>
+            <div>昨日留电：<span class="fr blue">32</span></div>
+        </div>
+
+    </div>
+    <div class="account-detail"><a href="customer.html">查看我的客户</a></div>
+</div>
+
+</div>
+
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+    $("#logout").click(function () {
+        window.location.href="index.html";
+        window.sessionStorage.removeItem("login");
+    })
+</script>
+</html>

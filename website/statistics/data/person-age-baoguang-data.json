@@ -1,0 +1,14 @@
+﻿{
+  "status": "success",
+  "title":"曝光",
+  "series":[
+    {
+      "name":"曝光",
+      "data":[
+        {"value":"235", "name":"10-20岁"},
+        {"value":"210", "name":"20-30岁"},
+        {"value":"234", "name":"30-40岁"}
+      ]
+    }
+  ]
+}

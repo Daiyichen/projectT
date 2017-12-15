@@ -1,0 +1,14 @@
+﻿{
+  "status": "success",
+  "title":"平台费用分布图",
+  "series":[
+    {
+      "name":"平台费用分布图",
+      "data":[
+        {"value":"335", "name":"智慧推"},
+        {"value":"310", "name":"艾推不推"},
+        {"value":"234", "name":"广点通"}
+    ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+@charset "utf-8";
+.send-mess{width: 383px;background: #fff;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;padding: 15px 10px;}
+.regist-title {width: 342px;margin: 0 auto 10px;font-size: 24px;position: relative;}
+.regist-form {width: 342px;margin: 0 auto;}
+.regist-title span:nth-child(2) {font-size: 16px;color: #333; width: 342px; margin: 0 auto; display: block;}
+.input-box{position: relative;}
+.regist-input3 {width: 338px;height: 40px;line-height: 40px;border: 1px solid #ddd;color: #333;text-indent: 5px;margin-top: 5px;margin-bottom: 20px;font-size: 14px;border-radius: 5px;}
+.regist-text1 {color: #e8380d;clear: both;font-size: 12px; position: absolute; bottom: 2px;}
+.regist-submit {width: 340px;height: 40px;line-height: 40px;border: none;color: #fff;background: #f56a03;font-size: 18px;cursor: pointer;border-radius: 5px;}

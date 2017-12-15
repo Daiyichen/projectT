@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>精智效果展示平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="top">
+    <div class="mail fl logo"><a href="#"><img src="images/mail.png"></a></div>
+    <div class="center fl"><span class="current">今日</span><span>|</span><span>昨日</span></div>
+    <div class="user fr logo"><a href="#"><img src="images/user.png"></a></div>
+</div>
+<div class="header">
+    <div id="day" class="day">23</div>
+    <div id="date" class="date">2015.07</div>
+    <div class="welcome">万科，欢迎回来</div>
+    <div class="header-bottom"></div>
+</div>
+<div class="content-box">
+    <div id="main" class="main-box"></div></div>
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    option = {
+        title : {
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            y:'bottom',
+            data:[
+                {
+                    name: '曝光量',
+                    textStyle:{
+                        color:'#06d2e1'
+                    }
+                },
+                {
+                    name: '点击量',
+                    textStyle:{
+                        color:'#ffdd56'
+                    }
+                },
+                {
+                    name:'留电量',
+                    textStyle:{
+                        color:'#57ffb6'
+                    }
+                }
+            ]
+        },
+        toolbox: {
+            show : false,
+
+        },
+        dataZoom : {//数据区域缩放（滚动条）
+            show: true,
+            realtime: true,
+            start: 30,//从30%开始展现
+            // y:20,
+            // dataBackgroundColor:"green",
+            end: 60,//在60%的数据处截止
+            //witdh:5,
+            height: 15
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                position:'top',
+                boundaryGap : false,
+                data : ['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00','24:00'],
+                axisLabel: {
+                    textStyle:{
+                        color:'#66666e',
+                        fontSize:'14',
+                    }
+
+                },
+                splitArea:{
+                    areaStyle:{
+                        color:'rgba(250,250,250,0.3)'
+                    }
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value',
+                axisLabel : {
+                   show:false
+                }
+            }
+        ],
+        series : [
+            {
+                name:'曝光量',
+                type:'line',
+                data:[11, 11, 15, 13, 12, 13, 10, 18, 4, 6, 12, 22, 38, 5,6,16,13,15,12,18,17,9,8,18],
+                markPoint : {
+                    symbol:'circle',
+                    symbolSize:8,
+                    data : [
+                        {type : 'max', name: '曝光量'},
+                    ]
+                },
+                itemStyle:{
+
+                    borderWidth: '3px',
+                    normal:{
+                        color:'#19bcff'
+                    }
+                },
+                lineStyle:{
+                    width:'8px'
+                }
+                /*,
+                markLine : {
+                    data : [
+                        {type : 'average', name: '平均值'}
+                    ]
+                }*/
+            },
+            {
+                name:'点击量',
+                type:'line',
+                data:[15, 10, 11, 19, 8, 3, 8, 13, 9, 6, 17, 12, 30, 15,16,6,23,25,18,10,13,19,18,18],
+                markPoint : {
+                  /*  data : [
+                        {name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}
+                    ]*/
+                },
+                itemStyle:{
+                symbol:'emptyCircle',
+                symbolSize:8,
+                borderWidth: '8px',
+                normal:{
+                    color:'#ffcb54'
+                }
+            }
+                /*,
+                markLine : {
+                    data : [
+                        {type : 'average', name : '平均值'}
+                    ]
+                }*/
+            },
+            {
+                name:'留电量',
+                type:'line',
+                data:[3, 20, 14, 10, 18, 13, 18, 33, 19, 16, 5, 22, 31, 25,26,16,13,15,12,19,10,11,17,18],
+
+                /* markPoint : {
+                data : [
+                    {name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}
+                ]
+                 }*/
+
+                itemStyle:{
+                    symbol:'emptyCircle',
+                    symbolSize:8,
+                    borderWidth: '8px',
+                    normal:{
+                        color:'#b3ff5f'
+                    }
+                }/*,
+                markLine : {
+                    data : [
+                        {type : 'average', name : '平均值'}
+                    ]
+                }*/
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</html>
