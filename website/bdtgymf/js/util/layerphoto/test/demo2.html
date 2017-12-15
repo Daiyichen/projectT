@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layer-更懂你的web弹窗解决方案</title>
+
+  <style>
+  html{background-color:#E3E3E3; font-size:14px; color:#000; font-family:'微软雅黑'}
+  *{margin: 0;padding: 0;}
+  button{box-shadow: 0;outline: 0;border: 0;}
+  .clearfix {zoom: 1;}
+  .clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;overflow: hidden;font-size: 0;}
+
+  a,a:hover{ text-decoration:none;}
+  ul li{list-style:none;float: left;margin-right: 30px;margin-bottom: 30px;}
+  </style>
+  
+  <script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+  <script src="../layer.js"></script>
+</head>
+<body>
+<div class="box">
+<div id="layer-photos-demo" class="layer-photos-demo">
+ <ul id="lay-photos"> 
+  <li><img data-pid="1"  src="images/1.jpg" alt="图片名111"></li>
+  <li><img data-pid="2"  src="images/2.jpg" alt="图片名22222"></li>
+  <li><img data-pid="3"  src="images/3.jpg" alt="图片名333"></li>
+  <li><img data-pid="4"  src="images/4.jpg" alt="图片名4444"></li>
+  </ul>
+</div>
+</div>
+  <!--弹出相册的右侧信息-->
+  <div id="layer-photo-right">
+    <div class="right-photo-info" >
+    	<i class="icon-img icon-p-close"></i>
+    	<div class="photo-inner clearfix">
+    		<img src="images/server1.jpg" class="avatar-img">
+    		<div class="right-photo"><p class="name">李女士</p>
+    			<p class="position">新房咨询顾问</p></div>
+    	</div><div class="btn-box">
+    		<button class="btn-main btn-photo-zx" data-id="121">
+    			<i class="icon-img icon-yuy"></i>预约看房</button>
+    			<button class="btn-main btn-photo-zx" data-id="123">
+    				<i class="icon-img icon-zx"></i>在线咨询</button>
+    	</div>
+    	<div class="bottom-tel">400 093 0329</div></div>
+  </div>
+<script>
+;!function(){
+
+layer.config({
+  //如果是独立版的layer，则将myskin存放在./skin目录下
+  //如果是layui中使用layer，则将myskin存放在./css/modules/layer目录下
+  extend: 'myskin/style.css',
+  skin:'lay-ext-myskin'
+});
+
+$.ajax({
+			url:'photos.json',
+			type:'get',
+			success:function(json){
+				 console.log(json);
+				 var data = JSON.parse(json);
+				 //var Layer = new Layer();
+				 new Layer().photosPage({
+            html:$("#layer-photo-right").html(),         
+            id: 100, //相册id，可选
+            parent:'#lay-photos',
+            data:data
+        });	
+			},error:function(err){
+				 console.log(err);
+				 var data = JSON.parse(err.responseText);
+				 //var Layer = new Layer();
+				 new Layer().photosPage({
+            html:$("#layer-photo-right").html(),         
+            id: 100, //相册id，可选
+            parent:'#lay-photos',
+            data:data
+        });									 
+		}
+
+	
+	
+    /*layer.photos({
+      photos: '#layer-photos-demo',
+      anim:5,
+      area:['1050px','600px'],
+      html:$("#layer-photo-right").html(),
+      id: 100, //相册id，可选
+      successCallback: function (layero, index) {
+            $("#layer-photo-right").show();
+            console.log("----successCallback----"+layero);
+
+            //监听关闭按钮
+            $(".icon-p-close").unbind('click').click(function(){
+               $("#layer-photo-right").hide();
+               layer.close(index);
+
+            })
+            //修改切换按钮位置
+            var leftV = (($(window).innerWidth() - 1050)/2)/2;
+            $(".layui-layer-imgprev").css("left",-leftV);
+            $(".layui-layer-imgnext").css("right", -leftV-250);
+      }
+    });
+*/
+    
+    
+  });
+  	$.fn.extend({
+  		photosPage1:function(){
+  			alert("d");	
+  		}
+  	});
+  	function Layer(){};
+		Layer.prototype.photosPage = function(options){
+			 var log = {};
+		    log.run = function(index){
+		    	  var datalist = options.data;
+		    	  var layerphotoData = null;
+		    	  $.each(datalist,function(key,value){
+		    	  	  console.log(key+"-"+value);
+		    	  	  if(value.type == index){
+		    	  	  	layerphotoData = value.dataV;
+		    	  	  	return false;
+		    	  	  }
+		    	  });
+		        layer.photos({
+						    photos: layerphotoData,
+						    anim: 5, //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+						    area:['1050px','600px'],
+		      			html:$("#layer-photo-right").html(),
+		      			successCallback: function (layero, index) {
+				            $("#layer-photo-right").show();
+				            console.log("----successCallback----"+layero);
+				
+				            //监听关闭按钮
+				            $(".icon-p-close").unbind('click').click(function(){
+				               $("#layer-photo-right").hide();
+				               layer.close(index);
+				
+				            })
+				            //修改切换按钮位置
+				            var leftV = (($(window).innerWidth() - 1050)/2)/2;
+				            $(".layui-layer-imgprev").css("left",-leftV);
+				            $(".layui-layer-imgnext").css("right", -leftV-250);
+				      }
+						 });
+		    };
+		    options = options || {};
+		    $(options.parent).find('img').each(function(index){
+		        $(this).on('click', function(){
+		        	  var pid= $(this).data("pid");
+		            log.run(pid);
+		        });
+		    });
+		}
+
+}();
+</script>
+</body>
+</html>

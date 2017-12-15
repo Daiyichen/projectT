@@ -1,0 +1,58 @@
+[
+{
+"type":1,
+ "dataV":{
+    "title": "效果图",
+    "id": 123,
+    "start": 0,
+    "data": [
+        {
+            "alt": "小图1",
+            "pid": 11,
+            "src": "images/1.jpg",
+            "thumb": "images/1.jpg"
+        },
+        {
+            "alt": "小图2",
+            "pid": 12,
+            "src": "images/2.jpg",
+            "thumb": "images/2.jpg"
+        },
+        {
+            "alt": "小图3",
+            "pid": 13,
+            "src": "images/3.jpg",
+            "thumb": "images/3.jpg"
+        }
+    ]
+  }
+},
+{
+	"type":2,
+   "dataV":{
+    "title": "交通图",
+    "id": 111,
+    "start": 0,
+    "data": [
+        {
+            "alt": "交通图-小图1",
+            "pid": 11,
+            "src": "images/4.jpg",
+            "thumb": "images/4.jpg"
+        },
+        {
+            "alt": "交通图-小图2",
+            "pid": 12,
+            "src": "images/2.jpg",
+            "thumb": "images/2.jpg"
+        },
+        {
+            "alt": "交通图-小图3",
+            "pid": 13,
+            "src": "images/3.jpg",
+            "thumb": "images/3.jpg"
+        }
+    ]
+    }
+ }
+]

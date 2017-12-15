@@ -1,0 +1,4 @@
+.layer-ext-myskin{width:500px;height:40px; background-color: #FFFFFF; line-height:40px; -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px; box-shadow:none;}
+.layer-ext-myskin .info{text-align: center;font-size: 16px;}
+.layer-ext-myskin1{background: none; box-shadow: none;}
+.layer-ext-myskin1 .layui-layer-setwin .layui-layer-close2{width: 13px; height: 13px; background: url(../../../../../img/img.png) no-repeat left center;background-position: -70px -40px; position: absolute; right: -3px; top: 3px; cursor: pointer;}

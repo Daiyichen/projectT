@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>分页bootstrap pagination</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/style.css?v=4.1.0" rel="stylesheet">
+		<style>
+			/*pre[data-lang]::before {
+			  content: attr(data-lang);
+			  display: block;
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="https://github.com/lyonlai/bootstrap-paginator" target="_blank">bootstrap pagination https://github.com/lyonlai/bootstrap-paginator</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<!--分页部分-->
+			<div id="pagenation" style="text-align: center">
+				<ul id="pageLimit"></ul>
+			</div>
+			<div class="panel panel-default">
+			    <div class="panel-body">
+			         	tips:这里颜色的效果是灰色，在style.css里设置了，如果还想用boostrap里默认的蓝色，就把style.css里相关的pagination的式样去掉
+			         	
+			    </div>
+			</div>
+			<div class="panel panel-info">
+			    <div class="panel-heading">
+			        <h3 class="panel-title">使用方法</h3>
+			    </div>
+			    <div class="panel-body">
+			      	<ol>
+			      		<li>首先要引入必要的css和js文件
+			      			<pre>
+			      				<code>
+&lt;link type="text/css" rel="stylesheet" href="bootstrap.css"&gt;
+&lt;script type="text/javascript" src="jquery-2.1.4.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="bootstrap-paginator.js"&gt;&lt;/script&gt;
+			      				</code>
+			      			</pre>
+			      		</li>
+			      		<li>
+			      			写一个div
+			      			<pre><code>&lt;div id="example"&gt;&lt;//div&gt;</code></pre>
+			      		</li>
+			      		<li>
+			      			编写js
+			      			<pre><code>$('#pageLimit').bootstrapPaginator({    
+    currentPage: 1,    
+    totalPages: 10,    
+    numberOfPages:5,    
+    itemTexts: function (type, page, current) {        
+        switch (type) {            
+            case "first": return "首页";            
+            case "prev": return "上一页";            
+            case "next": return "下一页";            
+            case "last": return "末页";           
+            case "page": return page;
+        }
+    }
+});</code></pre>
+			      		</li>
+			      	</ol>
+			    </div>
+			</div>
+		</div>
+
+		<!-- 全局js -->
+		<script src="js/jquery.min.js?v=2.1.4"></script>
+		<script src="js/bootstrap.min.js?v=3.3.6"></script>
+		<script src="js/plugins/bootstrap-pagination/bootstrap-paginator.min.js"></script>
+
+		<script>
+		
+			// In your Javascript (external .js resource or <script> tag)
+			$(document).ready(function() {
+				var currentPage = 1,
+					totalPages =10,
+					numberOfPages=5;
+					
+				
+			  $('#pageLimit').bootstrapPaginator({
+			      currentPage: currentPage,//当前的请求页面。
+			      totalPages: totalPages,//一共多少页。
+			      size:"normal",//应该是页眉的大小。
+			      bootstrapMajorVersion: 3,//bootstrap的版本要求。
+			      alignment:"right",
+			      numberOfPages:numberOfPages,//一页列出多少数据。
+			      itemTexts: function (type, page, current) {//如下的代码是将页眉显示的中文显示我们自定义的中文。
+			         switch (type) {
+				         case "first": return "首页";
+				         case "prev": return "上一页";
+				         case "next": return "下一页";
+				         case "last": return "末页";
+				         case "page": return page;
+			         }
+			     },
+			     onPageClicked: function (event, originalEvent, type, page) {
+			     	console.log(page);					
+			     }
+	 		});
+			});
+		</script>
+
+	</body>
+
+</html>

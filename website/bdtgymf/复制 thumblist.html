@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta id="viewport" name="viewport" content="width=1200" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>		
+		<title>楼盘图集</title>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>		
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<script type="text/javascript">
+				$("header").load("header.html",function(){		
+					$(".nav-box li").eq(4).addClass("active").siblings().removeClass("active");
+				
+				});
+			</script>
+		</header>
+		<!--头部-->
+
+		<div class="container">			
+			<!--楼盘信息-->
+			<div class="content-wrapper">			
+				<!--图集-->
+				<div class="content-item thumblist-wrapper">
+					<h2 class="title">图集(12)</h2>
+					<ul class="thumb-list clearfix" id="layer-photos-demo">
+						<li class="thumb-item">							
+								<img src="img/tj1.jpg" layer-pid="1" layer-src="img/tj1.jpg" alt="效果图">
+								<p class="mark-txt">效果图</p>
+								<div style="display: none;">							
+									<img src="img/gallertyb.jpg" layer-pid="3" layer-src="img/gallertyb.jpg" alt="隐藏的图片">
+									<p class="mark-txt">隐藏的图片、、、、</p>							
+								</div>
+						</li>
+						
+						<li class="thumb-item">
+							<img src="img/tj2.jpg" layer-pid="2" layer-src="img/tj2.jpg" alt="交通图">
+							<p class="mark-txt">交通图</p>							
+						</li>
+						<li class="thumb-item">							
+							<img src="img/tj3.jpg" layer-pid="3" layer-src="img/tj3.jpg" alt="样板图">
+							<p class="mark-txt">样板图</p>							
+						</li>
+						<li class="thumb-item">							
+							<img src="img/tj4.jpg" layer-pid="4" layer-src="img/tj4.jpg" alt="局部图">
+							<p class="mark-txt">局部图</p>							
+						</li>
+						<li class="thumb-item">							
+							<img src="img/tj5.jpg" layer-pid="5" layer-src="img/tj5.jpg" alt="远眺图">
+							<p class="mark-txt">远眺图</p>							
+						</li>
+						<li class="thumb-item">							
+							<img src="img/tj6.jpg" layer-pid="6" layer-src="img/tj6.jpg" alt="鸟瞰图">
+							<p class="mark-txt">鸟瞰图</p>
+						</li>
+					</ul>
+				</div>
+				<!--图集-->
+				
+				
+		</div>
+		</div>
+		
+		<!--弹出相册的右侧信息-->
+		<div id="layer-photo-right">
+			<script type="text/javascript">
+				$("#layer-photo-right").load("photolayer.html",function(){				
+			});
+			</script>
+		</div>
+		
+		  <!--弹出相册的右侧信息-->
+		<footer>
+			<script type="text/javascript">
+				$("footer").load("footer.html",function(){				
+				});
+			</script>
+		</footer>
+					
+		<!--layer photo-->
+		<script src="js/util/layerphoto/layer.js"></script>
+		<script src="js/thumblist.js"></script>
+	</body>
+</html>

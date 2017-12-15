@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta id="viewport" name="viewport" content="width=1200" />
+		<link rel="stylesheet" type="text/css" href="js/util/layer/css/layui.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>		
+		<link rel="stylesheet" type="text/css" href="css/map.css"/>
+		<link rel="stylesheet" type="text/css" href="css/proup.css" />
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=2fc0f4cc0cd02b070e369197427a2b0e"></script>
+    	<script src="http://webapi.amap.com/ui/1.0/main.js"></script>
+    	<script src="js/map.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<script type="text/javascript">
+				$("header").load("header.html",function(){
+					//load header完成
+					$(".topbanner").show();
+				});
+			</script>
+		</header>
+		<!--头部-->
+
+		<div class="container">			
+			<!--楼盘信息-->
+			<div class="content-wrapper">			
+				<!--楼盘信息-->
+				<div class="content-item clearfix">
+					<div class="content-l">
+						<!--楼盘相册-->
+	                   	<div id="db_gallery">
+							<div class="db_imgSet">
+								<div class="db_imgWin">
+									<img src="img/gallertyb.jpg"></div>
+							    </div>
+								<div class="db_thumSet">
+									<ul class="db_thumMove">
+										<li>
+											<a href="img/gallerys1.jpg">
+												<img src="img/gallerys1.jpg">
+												<p class="text">效果图</p>
+												<p class="mask">&nbsp;</p>
+											</a>
+										</li>
+										<li>
+											<a href="img/gallerys2.jpg">
+												<img src="img/gallerys2.jpg">
+												<p class="text">交通图</p>
+												<p class="mask">&nbsp;</p>
+											</a>
+										</li>
+										<li>
+											<a href="img/gallerys3.jpg">
+												<img src="img/gallerys3.jpg">
+												<p class="text">样板间</p>
+												<p class="mask">&nbsp;</p>
+											</a>
+										</li>
+										<li>
+											<a href="img/gallerys4.jpg">
+												<img src="img/gallerys4.jpg">
+												<p class="text">实景图</p>
+												<p class="mask">&nbsp;</p>
+											</a>
+										</li>
+							
+										<!--<div class="db_thumLine"></div>-->
+									</ul>
+							
+									<!--<div class="db_prevPageBtn" title="上一张"></div>
+									<div class="db_nextPageBtn" title="下一张"></div>-->
+								</div>
+						</div>   
+					</div>
+					<div class="content-r">
+						<div class="price-box">
+							<p class="price">参考价格:<span class="money">13000</span>元/㎡
+								<a href="javascript:;" class="change-txt" data-bid="1" data-type="1" data-type="1">变化通知我</a>					
+							</p>
+						</div>
+						<div class="telphone-box">
+							<div class="telphone">
+								<span class="tel-number">400 093 0329</span>
+								<a href="" class="tel-btn btn-b1 all-dialog-btn" data-type="12">免费咨询</a>
+								<a href="" class="tel-btn btn-b2 all-dialog-btn" data-type="13">免费看房</a>
+							</div>						
+						</div>
+						<div class="lp-info-box">
+						<!--优惠-->		
+						<div class="lp-info discout-item">
+							<span class="name">优惠信息：</span><span class="info">一次性优惠10000元</span>
+							<a href="javascript:;" class="change-txt all-dialog-btn" data-bid="1" data-type="2">优惠通知我</a>						
+						</div>
+						<!--开盘信息-->
+						<div class="lp-info">
+							<span class="name">开盘时间：</span><span class="info">2018年12月06日</span>
+							<a href="javascript:;" class="change-txt all-dialog-btn" data-bid="1" data-type="3">开盘通知我</a>						
+						</div>
+						<!--交房-->
+						<div class="lp-info">
+							<span class="name">交房时间：</span><span class="info">2018年12月06日</span>
+							<a href="javascript:;" class="change-txt all-dialog-btn" data-bid="1" data-type="4">交房通知我</a>						
+						</div>
+						<!--户型-->
+						<div class="lp-info ">
+							<span class="name">户型信息：</span>
+							<a class="info lp-hx" href="">一室(1)</a>
+							<a href="" class="info lp-hx">二室(2)</a>
+							<a href="" class="change-txt" data-bid="1" >全部户型</a>						
+						</div>
+					</div>
+					
+				</div>
+				</div>
+				<!--楼盘信息-->
+				<!--推荐顾问-->
+				<div class="content-item clearfix">
+					<h2 class="title">推荐顾问</h2>
+					<div class="advisor-label">
+						<h3 class="tit">找顾问底价买房</h3>
+						<h4 class="sub-tit"><span class="tit-text">找他们，不只有底价，还有专业的买房分析</span></h4>
+						<ul class="clearfix">
+		                    <li class="txt"><strong>给建议</strong>
+		                        <p>客户立场<br>提供建议</p>
+		                    </li>
+		                    <li class="txt"><strong><strong>帮砍价</strong></strong>
+		                        <p>底价基础<br>再帮砍价</p>
+		                    </li>
+		                    <li class="txt"><strong>助买房</strong>
+		                        <p>全程陪同<br>精打细算</p>
+		                    </li>
+		                </ul>
+					</div>
+					<ul class="advisor-list">
+					    <li class="advisor-box">	
+					     	<span class="con-img">
+						   		<img  src="img/server1.jpg">						         
+						    </span>
+						    <div class="con-desc">								
+								<h3 class="name">李女士</h3>										
+								<p><span class="see-n">服务客户:</span><span class="see-v">622</span>人</p>
+								<a href="javascript:;" class="btn-order all-dialog-btn" data-userid="zhangjun" data-type="8">预 约</a>
+						    </div>
+					    </li>					         
+					    <li class="advisor-box">	
+					     	<span class="con-img">
+						   		<img  src="img/server2.jpg">						         
+						    </span>
+						    <div class="con-desc">								
+								<h3 class="name">张先生</h3>										
+								<p><span class="see-n">服务客户:</span><span class="see-v">345</span>人</p>
+								<a href="javascript:;" class="btn-order all-dialog-btn" data-userid="zhangjun" data-type="8">预 约</a>
+						    </div>
+					    </li>	
+					     <li class="advisor-box">	
+					     	<span class="con-img">
+						   		<img  src="img/server3.jpg">						         
+						    </span>
+						    <div class="con-desc">								
+								<h3 class="name">王先生</h3>										
+								<p><span class="see-n">服务客户:</span><span class="see-v">228</span>人</p>
+								<a href="javascript:;" class="btn-order all-dialog-btn" data-userid="zhangjun" data-type="8">预 约</a>
+						    </div>
+					    </li>	
+        			</ul>
+        			<!--订阅信息-->
+        			<div class="advisor-label subscribe-box">
+			            <ul class="sub-list clearfix">
+			              <li class="sub-item">
+			              	<input type="checkbox" value="1" name="bj" id="select1">
+			                <label for="select1">变价通知</label>
+			               </li>
+			              <li class="sub-item">
+			                <input type="checkbox" value="2" name="yh" id="select2">
+			                <label for="select2">优惠通知</label>
+			              </li>
+			              <li class="sub-item">
+			              	 <input type="checkbox" value="3" name="kp" id="select3">
+			                 <label for="select3">开盘通知</label>
+			              </li>
+			              <li class="sub-item">
+			                <input type="checkbox" value="5" name="dt" id="select4">
+			                <label for="select4">最新动态</label>
+			               </li>
+			              <li class="sub-item">
+			                <input type="checkbox" value="6" name="kf" id="select5">
+			                <label for="select5">看房团通知</label>
+			                </li>
+			            </ul>
+			            <a href="javascript:" class="btn-main btn-subscribe">立即订阅</a>
+					</div>
+				</div>
+				<!--推荐顾问-->
+				<!--成交记录-->
+				<div class="content-item">
+					<h2 class="title">成交记录 <a class="see-more" href="">更多 ></a>
+					</h2>
+					<ul class="history-list">
+				         <li class="deal-title">
+				              <span>面积</span>
+				              <span>楼层</span>
+				              <span>成交时间</span>
+				         </li>				              
+				         <li>
+				              <span>162.77平</span>
+				              <span>10层/31层</span>
+				              <span>2017-11</span>
+				               <span class="see-price">
+				                   <button class="btn-main btn-see-price all-dialog-btn" data-id="1636" data-type="7">看底价</button>
+				                </span>
+				          </li>				              
+				          <li>
+				               <span>146.28平</span>
+				               <span>21层/31层</span>
+				               <span>2017-09</span>
+				               <span class="see-price">
+				                    <button class="btn-main btn-see-price all-dialog-btn" data-id="121" data-type="7">看底价</button>
+				               </span>
+				          </li>				              
+				         </ul>
+				</div>
+				<!--成交记录-->
+				<!--户型-->
+				<div class="content-item">
+					<h2 class="title">户型<a class="see-more" href="">更多 ></a></h2>				
+					<ul class="hx-list">
+						<li>
+							<div class="top-box">
+								<div class="c-pic">
+									<img src="img/hx1.jpg" />
+								</div>
+								<div class="c-right">
+									<h2 class="c-title">2室2厅2卫  118平户型 </h2>
+									<div class="c-room">
+										建筑面积：<span> 118m<sup>2</sup></span>朝向：<span>南北</span>
+									</div>
+									<p class="c-detail">户型解读：<span>整个空间方正，拐角少，后期利用难度低，提升整个空间的利用率，整个空间方正，拐角少，后期利用难度低，整个空间后期利整个空间方正，拐角少，后期利用难度低，提升整个空间的利用率，整个空间方正，拐角少，后期利用难度低，整个空间后期利整个空间方正，拐角少，后期利用难度低，提升整个空间的利用率，整个空间方正，拐角少，后期利用难度低，整个空间后期利</span></p>
+									<a class="btn-main c-btn all-dialog-btn" data-id="1" data-type="14">查看户型价格	</a>						
+									
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="top-box">
+								<div class="c-pic">
+									<img src="img/hx2.jpg" />
+								</div>
+								<div class="c-right">
+									<h2 class="c-title">2室2厅1卫    89平户型 </h2>
+									<div class="c-room">
+										建筑面积：<span>89m<sup>2</sup></span>朝向：<span>南北</span>
+									</div>
+									<p class="c-detail">户型解读：<span>整个空间方正，拐角少，后期利用难度低，提升整个空间的利用率，整个空间方正，拐角少，后期利用难度低，整个空间后期利整个空间方正，拐角少，后期利用难度低，提升整个空间的利用率，整个空间方正，拐角少，后期利用难度低，整个空间后期利整个空间方正，拐角少，后期利用难度低，提升整个空间的利用率，整个空间方正，拐角少，后期利用难度低，整个空间后期利</span></p>
+									<a class="btn-main c-btn all-dialog-btn" data-id="1" data-type="14">查看户型价格	</a>	
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+				<!--户型-->
+				<!--图集-->
+				 <div class="content-item thumblist-wrapper" id="thubmlist_wrapper">	
+					<script id="layer-teplate-photo" type="text/html">
+					    {{if total != 0}}
+					    <h2 class="title">图集({{total}})
+					    	<!-- <a class="see-more" href="/loupan/<?php echo $build_res['id']?>/photo.html">更多 ></a> -->
+					    </h2>
+					    <ul class="thumb-list clearfix" id="layer-photos-demo">
+					        {{each photos as value}} {{if value.data && value.data[0]}}
+					        <li class="thumb-item">
+					            <img src="{{value.data[0].src}}" data-pid="{{value.type}}" alt="{{value.data[0].alt}}">
+					            <p class="mark-txt">{{value.title}}</p>
+					        </li>
+					        {{/if}} {{/each}}
+					    </ul>
+					    {{/if}}
+					</script>
+				</div>
+				<!--图集-->
+				
+				<!--周边配套-->
+				<div class="content-item">
+					<h2 class="title">周边配套<a class="see-more" href="">更多 ></a></h2>
+					<div class="map-box">
+						<div class="mapwrapper">
+	            <input type="hidden" id="latitude" value="41.693702">
+	            <input type="hidden" id="longitude" value="123.410187">
+	            <div class="center-map amap-container" id="container" >
+	            </div>
+	            <div class="tab-map" id="mapSearchList">
+	                <div data-id="jt" class="jt mapitem active"><span>交通</span></div>
+	                <div data-id="jy" class="jy mapitem"><span>教育</span></div>
+	                <div data-id="yl" class="yl mapitem"><span>医疗</span></div>
+	                <div data-id="yh" class="yh mapitem"><span>银行</span></div>
+	                <div data-id="cs" class="cs mapitem"><span>超市</span></div>
+	                <div data-id="cy" class="cy mapitem"><span>餐饮</span></div>
+	            </div>
+	            <div class="nearby-box">
+	                2公里内的配套情况
+	                <p><span>地铁站4个</span><span>公交车站32个</span></p>
+	            </div>
+	            <div class="right-map">
+	                <div class="map-list" id="myList"><div class="amap-ui-markerlist-list-ele"><span class="list-title">地铁站</span><div data-id="jt1" class="jt1 mapitem1"><p class="map-name"><span>1</span>红椿路(地铁站)</p><p class="map-at">707米</p></div></div><div data-id="jt1" class="jt1 mapitem1 amap-ui-markerlist-list-ele"><p class="map-name"><span>2</span>上河村(地铁站)</p><p class="map-at">994米</p></div><div data-id="jt1" class="jt1 mapitem1 amap-ui-markerlist-list-ele"><p class="map-name"><span>3</span>王士屯(地铁站)</p><p class="map-at">1357米</p></div><div data-id="jt1" class="jt1 mapitem1 amap-ui-markerlist-list-ele selected"><p class="map-name"><span>4</span>城建学院(地铁站)</p><p class="map-at">1384米</p></div><div class="amap-ui-markerlist-list-ele"><span class="list-title">公交车站</span><div data-id="jt1" class="jt1 mapitem1"><p class="map-name"><span>1</span>红椿路铁路桥(公交站)</p><p class="map-at">618米</p></div></div><div data-id="jt1" class="jt1 mapitem1 amap-ui-markerlist-list-ele"><p class="map-name"><span>2</span>郡原蓝湾(公交站)</p><p class="map-at">618米</p></div><div data-id="jt1" class="jt1 mapitem1 amap-ui-markerlist-list-ele"><p class="map-name"><span>3</span>郡原蓝湾(红椿路铁路桥)(公交站)</p><p class="map-at">617米</p></div><div data-id="jt1" class="jt1 mapitem1 amap-ui-markerlist-list-ele"><p class="map-name"><span>4</span>郡原小石城(公交站)</p><p class="map-at">850米</p></div><div class="amap-ui-markerlist-list-ele"><div data-id="jt1" class="jt1 mapitem1"><p class="map-name"><span>5</span>郡原小石城(红椿路高铁二街)(公交站)</p><p class="map-at">848米</p></div><p class="more-btn" data-type="公交车站">展开 &gt;</p></div></div>
+	            </div>
+
+        </div>
+					</div>
+				</div>
+				<!--周边配套-->
+		</div>
+		</div>
+		
+		<!--顶部悬浮客服-->
+		<div class="layer-advisor-wrapper">
+			<i class="img icon-d-close"></i>
+			<div class="advisor-box">
+				<span class="con-img">
+				<img  src="img/server3.jpg">						         
+				</span>
+				<div class="con-desc">								
+					<h3 class="name">李女士</h3>										
+					<p><span class="see-n">服务客户:</span><span class="see-v">622</span>人</p>
+					<a href="javascript:;" class="btn-order all-dialog-btn" data-userid="zhangjun" data-type="8">预 约</a>
+				</div>
+			</div>
+			
+		</div>
+		<!--顶部悬浮客服-->
+		<!--底部悬浮优惠条-->
+		<div class="layer-discount">
+			<i class="img icon-close1 "></i>
+			<div class="discount-inner-box">
+				<i class="img icon-dicount"></i>
+				<div class="discount-info-left">
+					<h4 class="title">9号线2房在售</h4>
+					<p class="desc">有效日期：2017.11.14-2017.12.31</p>
+				</div>
+				<div class="discount-info-right">
+					<p class="discount-info-txt">龙湖唐宁ONE临近南京南街、胜利大街、碧新路等3条城市主干道   项目主推76-89㎡2-3房住宅   网上报名了解楼盘最新详情！</p>
+					<a href="javascript:;" class="btn btn-get-discount all-dialog-btn" data-type="15">获取优惠</a>
+				</div>
+			</div>
+		</div>
+		<div class="small-discount-slide">
+			<i class="img icon-show-discount"></i>
+		</div>
+		
+		<!--弹出相册的右侧信息-->
+		<div id="layer-photo-right">
+			<script type="text/javascript">
+				$("#layer-photo-right").load("photolayer.html",function(){				
+			});
+			</script>
+		</div>
+		<!--底部悬浮优惠条-->
+		<footer>
+			<script type="text/javascript">
+				$("footer").load("footer.html",function(){
+					$(".footer-wrapper").height(400);
+				});
+			</script>
+		</footer>
+		
+		<script src="js/jquery.db_gallery1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lib/template.js" type="text/javascript" charset="utf-8"></script>	
+		<script>
+			    var json={"id":"427575","0":"427575","name":"\u91d1\u5730\u540d\u8457","1":"\u91d1\u5730\u540d\u8457","add_time":"1511280000","2":"1511280000","update_time":"1513304418","3":"1513304418","indexaction_id":"56","4":"56","secondaction_id":"251","5":"251","addr":"\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","6":"\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","line":"\u4e8c\u73af","7":"\u4e8c\u73af","goods":"50","8":"50","build":"\u9ad8\u5c42","9":"\u9ad8\u5c42","things":"\u4f4f\u5b85","10":"\u4f4f\u5b85","decoration":"","11":"","many":"300","12":"300","b_area":"","13":"","area":"","14":"","content":null,"15":null,"judgement":"1","16":"1","publish":"1","17":"1","city_id":"1","18":"1","user_id":"2","19":"2","isvalue":"1","20":"1","area_msg":"","21":"","property_name":"\u5c1a\u672a\u516c\u5f00","22":"\u5c1a\u672a\u516c\u5f00","property_price":"0.00","23":"0.00","greening_rate":"","24":"","volume_ratio":"","25":"","car_position_num":"","26":"","car_position_ratio":"0.7\uff1a1","27":"0.7\uff1a1","car_position_price":"","28":"","longitude":"123.456762","29":"123.456762","latitude":"41.841738","30":"41.841738","location_img":"\/images\/buildingExtendImage\/20161012cl78wqa45t.jpg","31":"\/images\/buildingExtendImage\/20161012cl78wqa45t.jpg","sta_time":"1511798400","32":"1511798400","end_time":"1516118400","33":"1516118400","sell_state":"\u5f85\u552e","34":"\u5f85\u552e","sell_tel":"024-31282625","35":"024-31282625","sell_tel_s":"","36":"","sell_address":"\u7687\u59d1\u533a\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","37":"\u7687\u59d1\u533a\u9e2d\u7eff\u6c5f\u8857\u4e0e\u94c1\u5c71\u8def\u4ea4\u6c47\u5904","developer_name":"\u6c88\u9633\u9f0e\u4e1a\u623f\u5730\u4ea7\u5f00\u53d1\u6709\u9650\u516c\u53f8","38":"\u6c88\u9633\u9f0e\u4e1a\u623f\u5730\u4ea7\u5f00\u53d1\u6709\u9650\u516c\u53f8","licence_content":"","39":"","be_listed":"0","40":"0","five_card":"0","41":"0","pay_type":"","42":"","price_num":"8000","43":"8000","price_diff":"1000","44":"1000","youhui":"\u53cc\u5341\u4e8c\u62538\u6298","45":"\u53cc\u5341\u4e8c\u62538\u6298","yh_title":"\u4ef7\u683c\u4f18\u60e0","46":"\u4ef7\u683c\u4f18\u60e0","yh_content":"\u53cc\u5341\u4e8c\u671f\u95f4\uff0c\u653e\u6b3e\u62538\u6298\uff0c\u5fc3\u52a8\u4e0d\u5982\u884c\u52a8\uff0c\u6d3b\u52a8\u4ec5\u6301\u7eed\u4e00\u5468\uff01  \u7f51\u4e0a\u62a5\u540d\u4e86\u89e3\u697c\u76d8\u6700\u65b0\u8be6\u60c5\uff01","47":"\u53cc\u5341\u4e8c\u671f\u95f4\uff0c\u653e\u6b3e\u62538\u6298\uff0c\u5fc3\u52a8\u4e0d\u5982\u884c\u52a8\uff0c\u6d3b\u52a8\u4ec5\u6301\u7eed\u4e00\u5468\uff01  \u7f51\u4e0a\u62a5\u540d\u4e86\u89e3\u697c\u76d8\u6700\u65b0\u8be6\u60c5\uff01","yh_time":"2017.11.14-2017.12.31","48":"2017.11.14-2017.12.31","sale_addr":"","49":"","car_position":"","50":"","build_nums":"","51":"","traffic":"","52":"","market":"","53":"","life":"","54":"","tags":"\u6539\u5584\u623f,\u7cbe\u88c5\u4fee,\u4f4e\u5bc6\u5ea6,\u516c\u56ed,\u5730\u6696","55":"\u6539\u5584\u623f,\u7cbe\u88c5\u4fee,\u4f4e\u5bc6\u5ea6,\u516c\u56ed,\u5730\u6696"};
+            var albums={"total":5,"photos":[{"type":1,"title":"\u6548\u679c\u56fe","id":0,"start":0,"data":[{"alt":"","pid":"2220","src":"https:\/\/pic2.ajkimg.com\/m\/964d44ec7331c40a438cd470dab224d4\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/964d44ec7331c40a438cd470dab224d4\/275x206n.jpg"},{"alt":"","pid":"2223","src":"https:\/\/pic2.ajkimg.com\/m\/f6e0dcf95280049d96cb7d905513b35d\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/f6e0dcf95280049d96cb7d905513b35d\/275x206n.jpg"},{"alt":"","pid":"2227","src":"https:\/\/pic2.ajkimg.com\/m\/96bd257e9827fb2bc17727beced73af7\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/96bd257e9827fb2bc17727beced73af7\/275x206n.jpg"},{"alt":"","pid":"2231","src":"https:\/\/pic2.ajkimg.com\/m\/9c95ac6d7a287df52dae33e3409f1987\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/9c95ac6d7a287df52dae33e3409f1987\/275x206n.jpg"}]},{"type":2,"title":"\u89c4\u5212\u56fe","id":0,"start":0,"data":[]},{"type":3,"title":"\u5b9e\u666f\u56fe","id":0,"start":0,"data":[]},{"type":4,"title":"\u4ea4\u901a\u56fe","id":0,"start":0,"data":[{"alt":"","pid":"2236","src":"https:\/\/pic2.ajkimg.com\/m\/1a0e386b18e4c156d5a9f41bfb299ff7\/275x206n.jpg","thumb":"https:\/\/pic2.ajkimg.com\/m\/1a0e386b18e4c156d5a9f41bfb299ff7\/275x206n.jpg"}]},{"type":5,"title":"\u6837\u677f\u95f4","id":0,"start":0,"data":[]},{"type":6,"title":"\u914d\u5957\u56fe","id":0,"start":0,"data":[]}]};
+            var build_res = json;
+		</script>
+		<script src="js/main.js"></script>
+	
+		<!--layer photo-->
+		<script src="js/util/layerphoto/layer.js"></script>
+		<script src="js/thumblist.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/bdetail.js"></script>
+	</body>
+</html>
